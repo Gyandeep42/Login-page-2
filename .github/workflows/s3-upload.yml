@@ -16,9 +16,9 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ASIAUK6YLKTAP2J7B4MR
-          aws-secret-access-key: 5mD6jkD+YG19vVfpMyRpzjyCNjM+/jdxGMpvKRBP
-          aws-session-token: IQoJb3JpZ2luX2VjEMf
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1  # Replace with your bucket's region
 
       - name: Upload files to S3
